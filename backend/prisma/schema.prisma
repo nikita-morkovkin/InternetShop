@@ -32,6 +32,7 @@ model Store {
   description String?
   userId      String?     @map("user_id")
   categories  Category[]
+  colors      Color[]
   orderItems  OrderItem[]
   products    Product[]
   reviews     Review[]
@@ -80,8 +81,10 @@ model Color {
   updatedAt DateTime @updatedAt @map("updated_at")
   name      String
   value     String
+  storeId   String?  @map("store_id")
   productId String?  @map("product_id")
   product   Product? @relation(fields: [productId], references: [id])
+  store     Store?   @relation(fields: [storeId], references: [id])
 
   @@map("color")
 }
