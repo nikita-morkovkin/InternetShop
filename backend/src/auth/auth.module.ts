@@ -23,5 +23,6 @@ import { YandexStrategy } from './strategies/yandex.strategy';
       useFactory: getJwtConfig,
     }),
   ],
+  exports: [AuthService],
 })
 export class AuthModule {}

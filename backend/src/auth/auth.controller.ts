@@ -82,7 +82,7 @@ export class AuthController {
   @Get('google/callback')
   @UseGuards(AuthGuard('google'))
   async googleAuthCallback(
-    @Req() req: any,
+    @Req() req,
     @Res({ passthrough: true }) res: Response,
   ) {
     // @ts-ignore
@@ -103,7 +103,7 @@ export class AuthController {
   @Get('yandex/callback')
   @UseGuards(AuthGuard('yandex'))
   async yandexAuthCallback(
-    @Req() req: Request,
+    @Req() req,
     @Res({ passthrough: true }) res: Response,
   ) {
     // @ts-ignore
