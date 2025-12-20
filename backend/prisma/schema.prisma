@@ -111,6 +111,7 @@ model Order {
   updatedAt DateTime    @updatedAt @map("updated_at")
   status    OrderStatus @default(PENDING)
   total     Int
+  paymentId String?     @map("payment_id")
   userId    String?
   user      User?       @relation(fields: [userId], references: [id])
   items     OrderItem[]
