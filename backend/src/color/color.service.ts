@@ -29,7 +29,6 @@ export class ColorService {
   }
 
   async create(storeId: string, dto: ColorDto) {
-    // Validate that the store exists
     const store = await this.prismaService.store.findUnique({
       where: { id: storeId },
     });
