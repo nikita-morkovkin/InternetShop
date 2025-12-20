@@ -11,7 +11,7 @@ export class ProductService {
       return this.getSearchTermFilter(searchTerm);
     }
 
-    const products = await this.prisma.product.findMany({
+    return await this.prisma.product.findMany({
       orderBy: {
         createdAt: 'desc',
       },
@@ -19,25 +19,27 @@ export class ProductService {
         categories: true,
       },
     });
-
-    return products;
   }
 
-  private getSearchTermFilter(searchTerm: string) {
-    return {
-      OR: [
-        {
-          title: {
-            contains: searchTerm,
-            mode: 'insensitive',
+  private async getSearchTermFilter(searchTerm: string) {
+    return this.prisma.product.findMany({
+      where: {
+        OR: [
+          {
+            title: {
+              contains: searchTerm,
+              mode: 'insensitive',
+            },
           },
-          description: {
-            contains: searchTerm,
-            mode: 'insensitive',
+          {
+            description: {
+              contains: searchTerm,
+              mode: 'insensitive',
+            },
           },
-        },
-      ],
-    };
+        ],
+      },
+    });
   }
 
   async getProductByStoreId(storeId: string) {
@@ -241,12 +243,12 @@ export class ProductService {
     });
   }
 
-  async delete(colorId: string) {
-    await this.getById(colorId);
+  async delete(id: string) {
+    await this.getById(id);
 
     return this.prisma.product.delete({
       where: {
-        id: colorId,
+        id,
       },
     });
   }
