@@ -1,11 +1,12 @@
-import { Metadata } from "next";
+import { Metadata } from 'next'
+import Auth from './Auth'
 
 export const metadata: Metadata = {
-  title: 'Авторизация'
-} 
-
-const AuthPage = () => {
-  return <div></div>
+	title: 'Авторизация'
 }
 
-export default AuthPage;
+const AuthPage = () => {
+	return <Auth />
+}
+
+export default AuthPage
