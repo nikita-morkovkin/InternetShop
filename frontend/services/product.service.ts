@@ -1,4 +1,4 @@
-import { axiosClassic, axiosWithAuth } from '@/api/api.interceptors'
+import { axiosClassic, axiosWithAuth } from '@/app/api/api.interceptors'
 import { API_URL } from '@/app/config/api.config'
 import { IProduct, IProductInput } from '@/app/shared/types/product.interface'
 
@@ -54,13 +54,13 @@ class ProductService {
 	}
 
 	async getSimilar(id: string) {
-    const { data } = await axiosClassic<IProduct[]>({
-      url: API_URL.products(`/similar/${id}`),
-      method: 'GET'
-    })
+		const { data } = await axiosClassic<IProduct[]>({
+			url: API_URL.products(`/similar/${id}`),
+			method: 'GET'
+		})
 
-    return data
-  }
+		return data
+	}
 
 	async create(data: IProductInput, storeId: string) {
 		const { data: createdProduct } = await axiosWithAuth<IProduct>({

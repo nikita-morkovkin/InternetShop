@@ -1,4 +1,4 @@
-import { axiosWithAuth } from '@/api/api.interceptors'
+import { axiosWithAuth } from '@/app/api/api.interceptors'
 import { API_URL } from '@/app/config/api.config'
 
 interface IFile {

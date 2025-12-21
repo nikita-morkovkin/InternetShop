@@ -1,4 +1,4 @@
-import { axiosClassic, axiosWithAuth } from '@/api/api.interceptors'
+import { axiosClassic, axiosWithAuth } from '@/app/api/api.interceptors'
 import { API_URL } from '@/app/config/api.config'
 import {
 	ICategory,
