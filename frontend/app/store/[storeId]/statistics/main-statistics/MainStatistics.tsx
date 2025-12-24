@@ -1,4 +1,5 @@
 import { useGetMainStatistics } from '@/app/hooks/queries/useGetStatistics'
+import { Skeleton } from '@/components/ui/skeleton'
 import MainStatisticsItem from './MainStatisticsItem'
 
 const MainStatistics = () => {
@@ -6,8 +7,10 @@ const MainStatistics = () => {
 
 	if (isLoading) {
 		return (
-			<div className='flex items-center justify-center py-8'>
-				<div className='text-muted-foreground'>Загрузка статистики...</div>
+			<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4'>
+				{Array.from({ length: 4 }).map((_, index) => (
+					<Skeleton key={index} className='h-[110px] w-full' />
+				))}
 			</div>
 		)
 	}
