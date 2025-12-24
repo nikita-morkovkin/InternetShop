@@ -184,7 +184,7 @@ export class StatisticsService {
         id: user.id,
         name: user.name,
         email: user.email,
-        avatar: user.avatar,
+        picture: user.avatar,
         total,
       };
     });

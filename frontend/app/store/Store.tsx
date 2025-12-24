@@ -1,5 +1,11 @@
+import StoreStatistics from './[storeId]/Store'
+
 const Store = () => {
-	return <div>Store</div>
+	return (
+		<div>
+			<StoreStatistics />
+		</div>
+	)
 }
 
 export default Store
