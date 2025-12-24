@@ -1,4 +1,5 @@
-export const SERVER_URL = process.env.SERVER_URL as string
+export const SERVER_URL =
+	process.env.SERVER_URL || ('http://localhost:5000' as string)
 
 export const API_URL = {
 	root: (url = '') => `${url ? url : ''}`,

@@ -5,7 +5,7 @@ import { IUser } from '@/app/shared/types/user.interface'
 class UserService {
 	async getProfile() {
 		const { data } = await axiosWithAuth<IUser>({
-			url: API_URL.users(`/profile`),
+			url: API_URL.users('profile'),
 			method: 'GET'
 		})
 
@@ -14,7 +14,7 @@ class UserService {
 
 	async toggleFavorites(productId: string) {
 		return axiosWithAuth<IUser>({
-			url: API_URL.users(`/profile/favorites/${productId}`),
+			url: API_URL.users(`profile/favorites/${productId}`),
 			method: 'PATCH'
 		})
 	}

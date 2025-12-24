@@ -20,7 +20,7 @@ class AuthService {
 
 	async getNewTokens() {
 		const response = await axiosClassic<IAuthResponse>({
-			url: API_URL.auth(`/login/access-token`),
+			url: API_URL.auth('login/access-token'),
 			method: 'POST'
 		})
 
@@ -33,7 +33,7 @@ class AuthService {
 
 	async logout() {
 		const response = await axiosClassic<boolean>({
-			url: API_URL.auth(`/logout`),
+			url: API_URL.auth('logout'),
 			method: 'POST'
 		})
 

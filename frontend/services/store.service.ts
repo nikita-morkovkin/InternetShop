@@ -9,7 +9,7 @@ import {
 class StoreService {
 	async getById(id: string) {
 		const { data } = await axiosWithAuth<IStore>({
-			url: API_URL.stores(`/by-id/${id}`),
+			url: API_URL.stores(`by-id/${id}`),
 			method: 'GET'
 		})
 		return data
@@ -17,7 +17,7 @@ class StoreService {
 
 	async getByStoreId(storeId: string) {
 		const { data } = await axiosWithAuth<IStore[]>({
-			url: API_URL.stores(`/by-store-id/${storeId}`),
+			url: API_URL.stores(`by-store-id/${storeId}`),
 			method: 'GET'
 		})
 		return data || []
@@ -34,7 +34,7 @@ class StoreService {
 
 	async update(id: string, data: IStoreEdit) {
 		const { data: updatedStore } = await axiosWithAuth<IStore>({
-			url: API_URL.stores(`/${id}`),
+			url: API_URL.stores(`${id}`),
 			method: 'PUT',
 			data
 		})
@@ -43,7 +43,7 @@ class StoreService {
 
 	async delete(id: string) {
 		const { data } = await axiosWithAuth<IStore>({
-			url: API_URL.stores(`/${id}`),
+			url: API_URL.stores(`${id}`),
 			method: 'DELETE'
 		})
 		return data

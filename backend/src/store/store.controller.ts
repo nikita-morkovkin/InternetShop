@@ -14,7 +14,7 @@ import { CreateStoreDto } from './dto/create-store.dto';
 import { UpdateStoreDto } from './dto/update-store.dto';
 import { StoreService } from './store.service';
 
-@Controller('store')
+@Controller('stores')
 export class StoreController {
   constructor(private readonly storeService: StoreService) {}
 

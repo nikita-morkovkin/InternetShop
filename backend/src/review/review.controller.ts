@@ -12,7 +12,7 @@ import { CurrentUser } from 'src/user/decorators/user.decorator';
 import { ReviewDto } from './dto/review.dto';
 import { ReviewService } from './review.service';
 
-@Controller('review')
+@Controller('reviews')
 export class ReviewController {
   constructor(private readonly reviewService: ReviewService) {}
 

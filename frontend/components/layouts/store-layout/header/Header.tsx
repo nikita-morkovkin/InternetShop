@@ -2,35 +2,48 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
+import { useEffect } from 'react'
 import { DASHBOARD_URL } from '@/app/config/url.config'
 import { useProfile } from '@/app/hooks/useProfile'
 import Loader from '@/components/ui/Loader'
+import StoreSwitcher from '../StoreSwitcher'
 import MobileSidebar from '../sidebar/MobileSidebar'
 import styles from './Header.module.scss'
 
 const Header = () => {
-	const { user, isLoading } = useProfile()
+	const { user, isLoading, error } = useProfile()
+	const router = useRouter()
+
+	useEffect(() => {
+		if (!isLoading && (!user || error)) {
+			router.push('/auth')
+		}
+	}, [user, isLoading, error, router])
+
+	if (isLoading) {
+		return (
+			<div className={styles.header}>
+				<MobileSidebar />
+				<div className={styles.header__menu}>
+					<Loader size={'sm'} />
+				</div>
+			</div>
+		)
+	}
+
+	if (!user) {
+		return null
+	}
 
 	return (
 		<div className={styles.header}>
 			<MobileSidebar />
 			<div className={styles.header__menu}>
-				{isLoading ? (
-					<Loader size={'sm'} />
-				) : (
-					user && (
-						<>
-							<Link href={DASHBOARD_URL.home()}>
-								<Image
-									src={user.avatar}
-									alt={user.name}
-									width={42}
-									height={42}
-								/>
-							</Link>
-						</>
-					)
-				)}
+				<StoreSwitcher storeItems={user.stores} />
+				<Link href={DASHBOARD_URL.home()}>
+					<Image src={user.avatar} alt={user.name} width={42} height={42} />
+				</Link>
 			</div>
 		</div>
 	)

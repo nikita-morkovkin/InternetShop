@@ -5,7 +5,7 @@ import { OrderDto } from './dto/order.dto';
 import { PaymentStatusDto } from './dto/payment-status.dto';
 import { OrderService } from './order.service';
 
-@Controller('order')
+@Controller('orders')
 export class OrderController {
   constructor(private readonly orderService: OrderService) {}
 

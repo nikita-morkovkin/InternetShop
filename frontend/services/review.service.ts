@@ -5,7 +5,7 @@ import { IReview, IReviewInput } from '@/app/shared/types/review.interface'
 class ReviewService {
 	async getByStoreId(id: string) {
 		const { data } = await axiosWithAuth<IReview[]>({
-			url: API_URL.reviews(`/by-store-id/${id}`),
+			url: API_URL.reviews(`by-store-id/${id}`),
 			method: 'GET'
 		})
 
@@ -14,7 +14,7 @@ class ReviewService {
 
 	async create(data: IReviewInput, storeId: string) {
 		const { data: createdReview } = await axiosWithAuth<IReview>({
-			url: API_URL.reviews(`/${storeId}`),
+			url: API_URL.reviews(`${storeId}`),
 			method: 'POST',
 			data
 		})
@@ -24,7 +24,7 @@ class ReviewService {
 
 	async delete(id: string) {
 		const { data } = await axiosWithAuth<IReview>({
-			url: API_URL.reviews(`/${id}`),
+			url: API_URL.reviews(`${id}`),
 			method: 'DELETE'
 		})
 
