@@ -1,9 +1,6 @@
 import { axiosClassic, axiosWithAuth } from '@/app/api/api.interceptors'
-import { API_URL } from '@/app/config/api.config'
-import {
-	ICategory,
-	ICategoryInput
-} from '@/app/shared/types/category.interface'
+import { API_URL } from '@/config/api.config'
+import { ICategory, ICategoryInput } from '@/shared/types/category.interface'
 
 class CategoryService {
 	async getByStoreId(id: string) {

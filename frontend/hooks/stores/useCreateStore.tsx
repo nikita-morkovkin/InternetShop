@@ -2,8 +2,8 @@ import { useMutation, useQueryClient } from '@tanstack/react-query'
 import { useRouter } from 'next/navigation'
 import { useMemo } from 'react'
 import toast from 'react-hot-toast'
-import { STORE_URL } from '@/app/config/url.config'
-import { IStoreCreate } from '@/app/shared/types/store.interface'
+import { IStoreCreate } from '@/shared/types/store.interface'
+import { STORE_URL } from '@/config/url.config'
 import { storeService } from '@/services/store.service'
 
 export function useCreateStore() {

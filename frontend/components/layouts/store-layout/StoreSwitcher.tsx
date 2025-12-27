@@ -3,8 +3,6 @@
 import { ChevronsUpDown, PlusIcon, StoreIcon } from 'lucide-react'
 import { useRouter } from 'next/navigation'
 import { useState } from 'react'
-import { STORE_URL } from '@/app/config/url.config'
-import { IStore } from '@/app/shared/types/store.interface'
 import CreateStoreModal from '@/components/ui/modals/CreateStoreModal'
 import {
 	Popover,
@@ -21,6 +19,8 @@ import {
 	CommandList,
 	CommandSeparator
 } from '@/components/ui/shadcn/command'
+import { STORE_URL } from '@/config/url.config'
+import { IStore } from '@/shared/types/store.interface'
 
 interface StoreSwitcherProps {
 	storeItems: IStore[]

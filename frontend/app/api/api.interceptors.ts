@@ -1,6 +1,6 @@
 import type { CreateAxiosDefaults } from 'axios'
 import axios from 'axios'
-import { SERVER_URL } from '@/app/config/api.config'
+import { SERVER_URL } from '@/config/api.config'
 import {
 	getAccessToken,
 	removeFromStorage

@@ -1,6 +1,6 @@
 import { axiosWithAuth } from '@/app/api/api.interceptors'
-import { API_URL } from '@/app/config/api.config'
-import { IReview, IReviewInput } from '@/app/shared/types/review.interface'
+import { IReview, IReviewInput } from '@/shared/types/review.interface'
+import { API_URL } from '@/config/api.config'
 
 class ReviewService {
 	async getByStoreId(id: string) {

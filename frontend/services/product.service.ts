@@ -1,6 +1,6 @@
 import { axiosClassic, axiosWithAuth } from '@/app/api/api.interceptors'
-import { API_URL } from '@/app/config/api.config'
-import { IProduct, IProductInput } from '@/app/shared/types/product.interface'
+import { IProduct, IProductInput } from '@/shared/types/product.interface'
+import { API_URL } from '@/config/api.config'
 
 class ProductService {
 	async getAll(searchTerm: string | null) {

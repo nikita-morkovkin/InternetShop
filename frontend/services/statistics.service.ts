@@ -1,9 +1,9 @@
 import { axiosWithAuth } from '@/app/api/api.interceptors'
-import { API_URL } from '@/app/config/api.config'
 import {
 	IMainStatistics,
 	IMiddleStatistics
-} from '@/app/shared/types/statistics.interface'
+} from '@/shared/types/statistics.interface'
+import { API_URL } from '@/config/api.config'
 
 class StatisticsService {
 	async getMainStatistics(storeId: string) {

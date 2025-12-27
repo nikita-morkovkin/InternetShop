@@ -1,7 +1,7 @@
 import { PropsWithChildren, useState } from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form'
-import { useCreateStore } from '@/app/hooks/queries/useCreateStore'
-import { type IStoreCreate } from '@/app/shared/types/store.interface'
+import { useCreateStore } from '@/hooks/stores/useCreateStore'
+import { type IStoreCreate } from '@/shared/types/store.interface'
 import { Button } from '../shadcn/button'
 import {
 	Dialog,

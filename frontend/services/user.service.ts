@@ -1,6 +1,6 @@
 import { axiosWithAuth } from '@/app/api/api.interceptors'
-import { API_URL } from '@/app/config/api.config'
-import { IUser } from '@/app/shared/types/user.interface'
+import { API_URL } from '@/config/api.config'
+import { IUser } from '@/shared/types/user.interface'
 
 class UserService {
 	async getProfile() {

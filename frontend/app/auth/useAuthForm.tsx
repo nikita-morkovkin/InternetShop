@@ -3,8 +3,8 @@ import { useRouter } from 'next/navigation'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import toast from 'react-hot-toast'
 import { authService } from '@/services/auth/auth.service'
-import { DASHBOARD_URL } from '../config/url.config'
-import { IAuthForm } from '../shared/types/auth.interface'
+import { IAuthForm } from '@/shared/types/auth.interface'
+import { DASHBOARD_URL } from '../../config/url.config'
 
 export function useAuthForm(isReg: boolean) {
 	const router = useRouter()

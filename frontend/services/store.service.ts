@@ -1,10 +1,10 @@
 import { axiosWithAuth } from '@/app/api/api.interceptors'
-import { API_URL } from '@/app/config/api.config'
 import {
 	IStore,
 	IStoreCreate,
 	IStoreEdit
-} from '@/app/shared/types/store.interface'
+} from '@/shared/types/store.interface'
+import { API_URL } from '@/config/api.config'
 
 class StoreService {
 	async getById(id: string) {

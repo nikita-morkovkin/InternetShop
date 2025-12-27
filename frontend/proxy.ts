@@ -1,5 +1,5 @@
 import { NextResponse, type NextRequest } from 'next/server'
-import { PUBLIC_URL } from './app/config/url.config'
+import { PUBLIC_URL } from './config/url.config'
 import { EnumTokens } from './services/auth/auth-token.service'
 
 export async function proxy(request: NextRequest) {

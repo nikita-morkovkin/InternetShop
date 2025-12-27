@@ -35,12 +35,12 @@ export const STORE_URL = {
 	categoryEdit: (storeId: string = '', id: string = '') =>
 		STORE_URL.root(`/${storeId}/categories/${id}`),
 
-	colors: (storeId: string = '') => STORE_URL.root(`/${storeId}/color`),
+	colors: (storeId: string = '') => STORE_URL.root(`/${storeId}/colors`),
 	colorCreate: (storeId: string = '') =>
-		STORE_URL.root(`/${storeId}/color/create`),
+		STORE_URL.root(`/${storeId}/colors/create`),
 	colorEdit: (storeId: string = '', id: string = '') =>
-		STORE_URL.root(`/${storeId}/color/${id}`),
+		STORE_URL.root(`/${storeId}/colors/${id}`),
 
-	reviews: (storeId: string = '') => STORE_URL.root(`${storeId}/review`),
-	settings: (storeId: string = '') => STORE_URL.root(`${storeId}/settings`)
+	reviews: (storeId: string = '') => STORE_URL.root(`/${storeId}/reviews`),
+	settings: (storeId: string = '') => STORE_URL.root(`/${storeId}/settings`)
 }

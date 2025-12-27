@@ -6,8 +6,8 @@ import {
 	FormMessage
 } from '@/components/ui/shadcn/form'
 import { Input } from '@/components/ui/shadcn/input'
-import { validEmail } from '../shared/regex'
-import { IAuthForm } from '../shared/types/auth.interface'
+import { validEmail } from '@/shared/regex'
+import { IAuthForm } from '@/shared/types/auth.interface'
 
 interface AuthFieldsProps {
 	form: UseFormReturn<IAuthForm, any, IAuthForm>

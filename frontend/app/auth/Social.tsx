@@ -2,7 +2,7 @@ import { useRouter } from 'next/navigation'
 import { FaYandex } from 'react-icons/fa'
 import { FcGoogle } from 'react-icons/fc'
 import { Button } from '@/components/ui/shadcn/button'
-import { SERVER_URL } from '../config/api.config'
+import { SERVER_URL } from '../../config/api.config'
 import styles from './Auth.module.scss'
 
 const Social = () => {

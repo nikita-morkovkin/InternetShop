@@ -9,7 +9,7 @@ import {
 	Star
 } from 'lucide-react'
 import { useParams } from 'next/navigation'
-import { STORE_URL } from '@/app/config/url.config'
+import { STORE_URL } from '@/config/url.config'
 import MenuItem from './MenuItem'
 import styles from './Navigation.module.scss'
 import { IMenuItem } from './menu.interface'

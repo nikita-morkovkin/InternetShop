@@ -1,6 +1,6 @@
 import { axiosWithAuth } from '@/app/api/api.interceptors'
-import { API_URL } from '@/app/config/api.config'
-import { IColor, IColorInput } from '@/app/shared/types/color.interface'
+import { IColor, IColorInput } from '@/shared/types/color.interface'
+import { API_URL } from '@/config/api.config'
 
 class ColorService {
 	async getByStoreId(id: string) {

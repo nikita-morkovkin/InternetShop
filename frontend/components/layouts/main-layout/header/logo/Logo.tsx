@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { PUBLIC_URL } from '@/app/config/url.config'
+import { PUBLIC_URL } from '@/config/url.config'
 import { SITE_NAME } from '@/constants/seo.constant'
 import logoSvg from '../../../../../public/images/auth.svg'
 import styles from './Logo.module.scss'

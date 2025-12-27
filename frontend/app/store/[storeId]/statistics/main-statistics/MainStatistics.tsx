@@ -1,4 +1,4 @@
-import { useGetMainStatistics } from '@/app/hooks/queries/useGetStatistics'
+import { useGetMainStatistics } from '@/hooks/stores/useGetStatistics'
 import { Skeleton } from '@/components/ui/skeleton'
 import MainStatisticsItem from './MainStatisticsItem'
 

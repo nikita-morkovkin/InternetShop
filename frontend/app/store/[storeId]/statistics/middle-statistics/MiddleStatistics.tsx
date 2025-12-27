@@ -1,5 +1,5 @@
-import { useGetMiddleStatistics } from '@/app/hooks/queries/useGetStatistics'
 import { Skeleton } from '@/components/ui/skeleton'
+import { useGetMiddleStatistics } from '@/hooks/stores/useGetStatistics'
 import LastUsers from './LastUsers'
 import styles from './MiddleStatistics.module.scss'
 import Overview from './Overview'
