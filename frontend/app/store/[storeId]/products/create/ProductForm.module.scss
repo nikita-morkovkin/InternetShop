@@ -1,0 +1,44 @@
+.wrapper {
+	.content {
+		width: 100%;
+		max-width: 64rem;
+		padding: 1.5rem;
+
+		.header {
+			display: flex;
+			justify-content: flex-end;
+			margin-bottom: 1rem;
+		}
+
+		.form {
+			.grid {
+				display: grid;
+				grid-template-columns: repeat(4, 200px);
+				gap: 1.5rem;
+				align-items: start;
+				justify-content: center;
+			}
+
+			.gridItem {
+				display: flex;
+				flex-direction: column;
+				min-height: 86px;
+			}
+
+			.description {
+				margin-top: 1.5rem;
+
+				textarea {
+					min-height: 200px;
+				}
+			}
+
+			.button {
+				margin-top: 2rem;
+				width: auto;
+				max-width: 320px;
+				min-width: 200px;
+			}
+		}
+	}
+}

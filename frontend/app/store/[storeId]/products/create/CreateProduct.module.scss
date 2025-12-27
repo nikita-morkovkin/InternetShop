@@ -1,0 +1,13 @@
+.wrapper {
+	padding-left: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-direction: column;
+
+	> .heading {
+		padding-left: 25px;
+		padding-right: 25px;
+		padding-top: 30px;
+	}
+}

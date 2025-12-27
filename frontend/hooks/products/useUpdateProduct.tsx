@@ -6,16 +6,20 @@ import { STORE_URL } from '@/config/url.config'
 import { productService } from '@/services/product.service'
 import type { IProductInput } from '@/shared/types/product.interface'
 
+interface UpdateProductData extends IProductInput {
+	id: string
+}
+
 export const useUpdateProduct = () => {
 	const params = useParams<{ storeId: string }>()
 	const queryClient = useQueryClient()
 	const { push } = useRouter()
 
-	const { data: updateProduct, isPending: isUpdateProductLoading } =
+	const { mutate: updateProduct, isPending: isUpdateProductLoading } =
 		useMutation({
 			mutationKey: ['update product', params.storeId],
-			mutationFn: (data: IProductInput) =>
-				productService.update(params.storeId, data),
+			mutationFn: ({ id, ...data }: UpdateProductData) =>
+				productService.update(id, data),
 			onSuccess: () => {
 				queryClient.invalidateQueries({
 					queryKey: ['products', params.storeId]

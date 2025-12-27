@@ -22,7 +22,6 @@ const Products = () => {
 				id: product.id,
 				title: product.title,
 				price: product.price.toString(),
-				// Надо переделать тип
 				category: product.category.title,
 				color: product.color.name,
 				storeId: product.storeId

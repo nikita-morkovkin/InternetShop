@@ -1,19 +1,26 @@
 'use client'
 
 import Heading from '@/components/ui/Heading'
+import { useGetCategories } from '@/hooks/categories/useGetCategories'
+import { useGetColors } from '@/hooks/colors/useGetColors'
+import styles from './CreateProduct.module.scss'
+import ProductForm from './ProductForm'
 
 const CreateProduct = () => {
+	const { categories } = useGetCategories()
+	const { colors } = useGetColors()
+
 	return (
-		<div>
-			<div>
+		<div className={styles.wrapper}>
+			<div className={styles.heading}>
 				<Heading
+					className={styles.heading}
 					title='Создание товара'
 					description='Создайте новый товар для вашего магазина'
 				/>
 			</div>
 			<div>
-				{/* Product creation form will go here */}
-				<p>Форма создания товара будет здесь</p>
+				<ProductForm categories={categories || []} colors={colors || []} />
 			</div>
 		</div>
 	)
