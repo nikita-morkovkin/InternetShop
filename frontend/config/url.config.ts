@@ -24,7 +24,7 @@ export const STORE_URL = {
 	home: (storeId: string = '') => STORE_URL.root(`/${storeId}`),
 	products: (storeId: string = '') => STORE_URL.root(`/${storeId}/products`),
 	productCreate: (storeId: string = '') =>
-		STORE_URL.root(`/${storeId}/products`),
+		STORE_URL.root(`/${storeId}/products/create`),
 	productEdit: (storeId: string = '', id: string = '') =>
 		STORE_URL.root(`/${storeId}/products/${id}`),
 

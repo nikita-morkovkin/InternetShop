@@ -1,13 +1,14 @@
 import type { Metadata } from 'next'
 import { NO_INDEX_PAGE } from '@/constants/seo.constant'
+import Products from './Products'
 
 export const metadata: Metadata = {
-	title: 'Товары магазина',
+	title: 'Товары',
 	...NO_INDEX_PAGE
 }
 
 const ProductsPage = () => {
-	return <div>Products Page</div>
+	return <Products />
 }
 
 export default ProductsPage
